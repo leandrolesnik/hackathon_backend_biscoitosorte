@@ -3,6 +3,8 @@ const express = require('express')
 
 const app = express()
 
+const sortes = require("./mockup")
+
 // Configurações do Express
 // ---------------------------------------------
 app.set('view engine', 'ejs')

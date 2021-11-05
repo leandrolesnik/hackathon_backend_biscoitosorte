@@ -13,6 +13,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/css/style.css" />
+    <script src="../public/js/script.js"></script>
   </head>
 
   <body>
@@ -26,8 +27,20 @@
         <h1 class="display-4 fw-bold">Biscoito da Sorte</h1>
       </div>
       <div class="col-lg-6 mx-auto">
-        <h2 class="lead my-5">Uma pessoa nunca é muito velha para aprender.</h2>
-        <a class="btn btn-primary btn-lg px-3" href="/">Gerar Sorte</a>
+        <% 
+            const posicao = Math.floor(Math.random() * sortes.length); 
+            let frase = sortes[posicao]; 
+            console.log(sortes[posicao]); 
+            console.log(posicao);
+        %>
+        <h2 id="resultado" class="lead my-5"></h2>
+        <button
+          class="btn btn-primary btn-lg px-3"
+          onClick="nomeFuncao()"
+          onmouseover="nomeFuncao()"
+        >
+          Gerar sorte
+        </button>
       </div>
     </main>
   </body>
