@@ -27,17 +27,14 @@
         <h1 class="display-4 fw-bold">Biscoito da Sorte</h1>
       </div>
       <div class="col-lg-6 mx-auto">
-        <% 
-            const posicao = Math.floor(Math.random() * sortes.length); 
-            let frase = sortes[posicao]; 
-            console.log(sortes[posicao]); 
-            console.log(posicao);
-        %>
-        <h2 id="resultado" class="lead my-5"></h2>
+        <% const posicao = Math.floor(Math.random() * sortes.length); 
+        let frase = sortes[posicao]; 
+        console.log("_____________________");
+        console.log("Frase " + posicao + " - " + sortes[posicao]); %>
+        <h2 id="resultado" class="lead my-5"><%= frase %></h2>
         <button
           class="btn btn-primary btn-lg px-3"
-          onClick="nomeFuncao()"
-          onmouseover="nomeFuncao()"
+          onClick="window.location.reload(true);"
         >
           Gerar sorte
         </button>
